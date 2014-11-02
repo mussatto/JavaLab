@@ -1,12 +1,12 @@
 package com.sorter;
 
-public class QuickSort {
+public class QuickSort implements Sorter{
 
-    public static Long[] sort(Long[] unsortedArray){
+    public Long[] sort(Long[] unsortedArray){
         return quickSort(unsortedArray, 0, unsortedArray.length-1);
     }
 
-    public static Long[] quickSort(Long[] unsortedArray, int start, int end){
+    private static Long[] quickSort(Long[] unsortedArray, int start, int end){
         if(start < end){
             int pivotPosition = partition(unsortedArray, start, end);
 
@@ -17,7 +17,7 @@ public class QuickSort {
         return unsortedArray;
     }
 
-    public static int partition(Long[] unsortedArray, int start, int end){
+    private static int partition(Long[] unsortedArray, int start, int end){
         Long pivotValue = unsortedArray[start];
         Long swap;
 

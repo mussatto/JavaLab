@@ -2,6 +2,7 @@ package test.com.sorter;
 
 import com.builder.DataBuilder;
 import com.sorter.QuickSort;
+import com.sorter.Sorter;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -21,8 +22,8 @@ public class QuickSortTest {
                 fail("Should not be null, greater than upper range or lower than lower range");
             }
         }
-
-        array = QuickSort.sort(array);
+        Sorter sorter = new QuickSort();
+        array = sorter.sort(array);
         for(Long item : array){
             System.out.println(item);
         }
