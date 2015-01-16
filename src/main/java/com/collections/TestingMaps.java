@@ -20,7 +20,6 @@ class Key{
             Key otherKey = (Key) o;
             return otherKey.hashCode() == this.hashcode;
         }
-
         return false;
     }
 
